@@ -1,0 +1,12 @@
+{
+  "name": "RivalFrame",
+  "short_name": "RivalFrame",
+  "description": "Decision-ready competitive and market intelligence for B2B teams.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3efe8",
+  "theme_color": "#f3efe8",
+  "icons": [
+    {"src":"/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}
+  ]
+}
