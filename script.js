@@ -8,6 +8,7 @@
   };
   ensureStylesheet('app.css');
   ensureStylesheet('motion.css');
+  ensureStylesheet('cinematic.css');
 
   const runtimeStyle = document.createElement('style');
   runtimeStyle.textContent = `
@@ -183,5 +184,12 @@
     const updateProgress = () => { progress.style.transform = `scaleX(${Math.min(1, scrollY / max)})`; };
     addEventListener('scroll', updateProgress, { passive: true });
     updateProgress();
+  }
+
+  if (!document.querySelector('script[src="cinematic.js"]')) {
+    const extra = document.createElement('script');
+    extra.src = 'cinematic.js';
+    extra.defer = true;
+    document.body.appendChild(extra);
   }
 })();
