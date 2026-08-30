@@ -1,1 +1,0 @@
-RivalFrame V2 preflight marker — safe to remove after deployment.
