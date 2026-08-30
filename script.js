@@ -7,6 +7,13 @@
     document.head.appendChild(link);
   }
 
+  const runtimeStyle = document.createElement('style');
+  runtimeStyle.textContent = `
+    .rf-progress{position:fixed;left:0;right:0;top:0;height:3px;z-index:9999;transform-origin:left center;transform:scaleX(0);background:linear-gradient(90deg,#4767d7,#d9795f,#5d8f91);box-shadow:0 0 12px rgba(71,103,215,.22);pointer-events:none}
+    .console-tab[aria-selected="true"]{position:relative}.console-tab[aria-selected="true"]:after{content:"";position:absolute;left:22%;right:22%;bottom:3px;height:2px;border-radius:99px;background:linear-gradient(90deg,#4767d7,#d9795f)}
+  `;
+  document.head.appendChild(runtimeStyle);
+
   // Slim scroll-progress line: useful orientation, not decoration.
   const progress = document.createElement('div');
   progress.className = 'rf-progress';
@@ -49,6 +56,7 @@
     });
     panels.forEach(panel => { panel.hidden = panel.dataset.consolePanel !== name; });
   };
+  if (tabs.length) activateTab(tabs[0].dataset.panel);
   tabs.forEach(tab => tab.addEventListener('click', () => activateTab(tab.dataset.panel)));
 
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
