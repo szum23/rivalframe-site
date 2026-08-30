@@ -1,42 +1,43 @@
-/* RivalFrame motion system */
+/* RivalFrame cinematic motion system */
 :root{--motion-ease:cubic-bezier(.2,.8,.2,1);--motion-spring:cubic-bezier(.16,1,.3,1)}
 @media (prefers-reduced-motion:no-preference){
   .nav-shell{animation:navEnter .65s var(--motion-spring) both}
-  .hero-kicker{animation:heroRise .55s .08s var(--motion-spring) both}
-  .hero h1{animation:heroRise .72s .16s var(--motion-spring) both}
-  .hero-sub{animation:heroRise .68s .27s var(--motion-spring) both}
-  .hero .actions{animation:heroRise .62s .38s var(--motion-spring) both}
-  .hero-proof{animation:heroRise .62s .48s var(--motion-spring) both}
-  .intel-console{animation:consoleEnter .85s .25s var(--motion-spring) both,consoleFloat 7s 1.4s ease-in-out infinite alternate}
-  .signal-row{animation:signalBreath 5.5s ease-in-out infinite}
-  .signal-row:nth-child(2){animation-delay:.8s}.signal-row:nth-child(3){animation-delay:1.6s}
+  .hero-kicker{animation:heroRise .55s .06s var(--motion-spring) both}
+  .hero h1{animation:heroRise .82s .12s var(--motion-spring) both}
+  .hero-sub{animation:heroRise .72s .24s var(--motion-spring) both}
+  .hero .actions{animation:heroRise .65s .34s var(--motion-spring) both}
+  .hero-proof{animation:heroRise .65s .44s var(--motion-spring) both}
+  .intel-console{animation:consoleEnter .95s .2s var(--motion-spring) both,consoleFloat 5.5s 1.3s ease-in-out infinite alternate;will-change:transform}
+  .signal-row{animation:signalBreath 4.8s ease-in-out infinite}.signal-row:nth-child(2){animation-delay:.7s}.signal-row:nth-child(3){animation-delay:1.4s}
   .console-tab.active{animation:tabPop .3s var(--motion-spring)}
-  .console-result{animation:resultGlow 4s ease-in-out infinite}
-  .console-footer span{animation:chipFloat 4.5s ease-in-out infinite}.console-footer span:nth-child(2){animation-delay:.5s}.console-footer span:nth-child(3){animation-delay:1s}
-  .button{position:relative;overflow:hidden}.button:before{content:"";position:absolute;inset:-100% -40%;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.35),transparent 65%);transform:translateX(-120%) rotate(8deg);transition:transform .7s var(--motion-ease);pointer-events:none}.button:hover:before{transform:translateX(120%) rotate(8deg)}
-  .button:hover{transform:translateY(-3px) scale(1.015)!important}.button:active{transform:translateY(0) scale(.98)!important}
-  .outcome-card,.why-card,.fit-chip,.card{transition:transform .28s var(--motion-spring),box-shadow .28s ease,border-color .28s ease!important}
-  .outcome-card:hover,.why-card:hover,.fit-chip:hover,.card:hover{transform:translateY(-7px) scale(1.012)!important}
-  .process-line{position:relative}.process-line:before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,#4767d7,#5d8f91,#d9795f);z-index:4;border-radius:999px}.process-line.in-view:before{animation:processSweep 1.4s .18s var(--motion-spring) forwards}
-  .process-step{transition:transform .3s var(--motion-spring),background .3s ease!important}.process-step:hover{transform:translateY(-5px)}
-  .report-preview{animation:reportFloat 6s ease-in-out infinite alternate}
-  .nav-shell.scrolled{background:rgba(241,240,246,.93)!important;box-shadow:0 12px 34px rgba(37,48,81,.10)!important}
-  .console-panel-enter{animation:panelSwap .42s var(--motion-spring) both}
-  .motion-orb{position:fixed;border-radius:50%;pointer-events:none;z-index:-1;filter:blur(8px);opacity:.7}.motion-orb.one{width:330px;height:330px;left:-110px;top:18vh;background:radial-gradient(circle,rgba(71,103,215,.24),transparent 67%);animation:orbOne 16s ease-in-out infinite alternate}.motion-orb.two{width:300px;height:300px;right:-80px;top:42vh;background:radial-gradient(circle,rgba(217,121,95,.22),transparent 67%);animation:orbTwo 18s ease-in-out infinite alternate}.motion-orb.three{width:260px;height:260px;left:42%;bottom:-100px;background:radial-gradient(circle,rgba(93,143,145,.20),transparent 67%);animation:orbThree 20s ease-in-out infinite alternate}
+  .console-result{animation:resultGlow 3.4s ease-in-out infinite}
+  .console-footer span{animation:chipFloat 3.8s ease-in-out infinite}.console-footer span:nth-child(2){animation-delay:.45s}.console-footer span:nth-child(3){animation-delay:.9s}
+  .button{position:relative;overflow:hidden}.button:before{content:"";position:absolute;inset:-100% -40%;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.4),transparent 65%);transform:translateX(-120%) rotate(8deg);transition:transform .7s var(--motion-ease);pointer-events:none}.button:hover:before{transform:translateX(120%) rotate(8deg)}
+  .button:hover{transform:translateY(-4px) scale(1.02)!important}.button:active{transform:translateY(0) scale(.975)!important}
+  .outcome-card,.why-card,.fit-chip,.card{transition:transform .34s var(--motion-spring),box-shadow .3s ease,border-color .3s ease!important;will-change:transform}.outcome-card:hover,.why-card:hover,.fit-chip:hover,.card:hover{transform:translateY(-9px) scale(1.018)!important}
+  .process-line{position:relative}.process-line:before{content:"";position:absolute;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,#4767d7,#5d8f91,#d9795f);z-index:4;border-radius:999px}.process-line.in-view:before{animation:processSweep 1.7s .12s var(--motion-spring) forwards}
+  .process-step{transition:transform .35s var(--motion-spring),background .3s ease!important}.process-step:hover{transform:translateY(-7px) scale(1.015)}
+  .report-preview{animation:reportFloat 5s ease-in-out infinite alternate}
+  .nav-shell.scrolled{background:rgba(241,240,246,.94)!important;box-shadow:0 14px 38px rgba(37,48,81,.12)!important;transform:translateY(0)}
+  .console-panel-enter{animation:panelSwap .5s var(--motion-spring) both}
+  .motion-orb{position:fixed;border-radius:50%;pointer-events:none;z-index:-1;filter:blur(6px);opacity:.8;mix-blend-mode:multiply}.motion-orb.one{width:390px;height:390px;left:-140px;top:12vh;background:radial-gradient(circle,rgba(71,103,215,.3),transparent 67%);animation:orbOne 12s ease-in-out infinite alternate}.motion-orb.two{width:350px;height:350px;right:-100px;top:38vh;background:radial-gradient(circle,rgba(217,121,95,.28),transparent 67%);animation:orbTwo 14s ease-in-out infinite alternate}.motion-orb.three{width:310px;height:310px;left:38%;bottom:-120px;background:radial-gradient(circle,rgba(93,143,145,.25),transparent 67%);animation:orbThree 16s ease-in-out infinite alternate}
+  .rf-parallax{will-change:transform;transform:translate3d(0,var(--rf-parallax-y,0px),0) scale(var(--rf-parallax-scale,1))}
+  .rf-progressive .process-step{opacity:.45;transform:translateY(20px) scale(.98)}.rf-progressive .process-step.rf-active{opacity:1;transform:translateY(-6px) scale(1.025);box-shadow:0 16px 38px rgba(71,103,215,.12)}
+  .rf-cinematic{position:relative;overflow:clip}.rf-cinematic:after{content:"";position:absolute;inset:auto 0 0;height:1px;background:linear-gradient(90deg,transparent,#4767d7,#d9795f,#5d8f91,transparent);transform:scaleX(var(--rf-line,0));transform-origin:left center;opacity:.7}
 }
-@keyframes navEnter{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:none}}
-@keyframes heroRise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
-@keyframes consoleEnter{from{opacity:0;transform:translateY(34px) scale(.955) rotate(-1deg)}to{opacity:1;transform:none}}
-@keyframes consoleFloat{from{transform:translateY(0)}to{transform:translateY(-8px)}}
-@keyframes signalBreath{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
-@keyframes tabPop{0%{transform:scale(.94)}100%{transform:scale(1)}}
-@keyframes resultGlow{0%,100%{box-shadow:0 0 0 rgba(71,103,215,0)}50%{box-shadow:0 12px 34px rgba(71,103,215,.14)}}
-@keyframes chipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@keyframes navEnter{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:none}}
+@keyframes heroRise{from{opacity:0;transform:translateY(36px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes consoleEnter{from{opacity:0;transform:translateY(48px) scale(.93) rotate(-2deg)}to{opacity:1;transform:none}}
+@keyframes consoleFloat{from{transform:translateY(0) rotate(-.2deg)}to{transform:translateY(-14px) rotate(.35deg)}}
+@keyframes signalBreath{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+@keyframes tabPop{0%{transform:scale(.9)}100%{transform:scale(1)}}
+@keyframes resultGlow{0%,100%{box-shadow:0 0 0 rgba(71,103,215,0)}50%{box-shadow:0 16px 40px rgba(71,103,215,.18)}}
+@keyframes chipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @keyframes processSweep{to{width:100%}}
-@keyframes reportFloat{from{transform:rotate(-1.2deg) translateY(0)}to{transform:rotate(.2deg) translateY(-7px)}}
-@keyframes panelSwap{from{opacity:0;transform:translateY(12px) scale(.99)}to{opacity:1;transform:none}}
-@keyframes orbOne{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(90px,80px,0) scale(1.12)}}
-@keyframes orbTwo{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-100px,70px,0) scale(1.15)}}
-@keyframes orbThree{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(60px,-110px,0) scale(1.1)}}
-@media(max-width:700px){.motion-orb{opacity:.45}.intel-console{animation:consoleEnter .75s .2s var(--motion-spring) both,consoleFloat 8s 1.2s ease-in-out infinite alternate}.button:hover{transform:none!important}.outcome-card:hover,.why-card:hover,.fit-chip:hover,.card:hover{transform:none!important}}
+@keyframes reportFloat{from{transform:rotate(-1.6deg) translateY(0) scale(1)}to{transform:rotate(.6deg) translateY(-11px) scale(1.01)}}
+@keyframes panelSwap{from{opacity:0;transform:translateY(18px) scale(.975)}to{opacity:1;transform:none}}
+@keyframes orbOne{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(140px,110px,0) scale(1.2)}}
+@keyframes orbTwo{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-130px,100px,0) scale(1.2)}}
+@keyframes orbThree{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(90px,-150px,0) scale(1.18)}}
+@media(max-width:700px){.motion-orb{opacity:.5}.intel-console{animation:consoleEnter .8s .15s var(--motion-spring) both,consoleFloat 7s 1.1s ease-in-out infinite alternate}.button:hover{transform:none!important}.outcome-card:hover,.why-card:hover,.fit-chip:hover,.card:hover{transform:none!important}.rf-progressive .process-step.rf-active{transform:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}.motion-orb{display:none!important}}
