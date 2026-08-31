@@ -2,6 +2,12 @@
   if(!document.querySelector('link[href="polish.css"]')){
     const l=document.createElement('link');l.rel='stylesheet';l.href='polish.css';document.head.appendChild(l);
   }
+  if(!document.querySelector('link[rel="manifest"]')){
+    const m=document.createElement('link');m.rel='manifest';m.href='site.webmanifest';document.head.appendChild(m);
+  }
+  if(!document.querySelector('script[src="analytics.js"]')){
+    const a=document.createElement('script');a.src='analytics.js';a.async=true;document.head.appendChild(a);
+  }
   const p=document.querySelector('.v2-progress');
   const intel=document.querySelector('.hero-intel');
   const tabs=[...document.querySelectorAll('[data-stage-btn]')];
