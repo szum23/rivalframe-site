@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>RivalFrame — Competitive intelligence, delivered as a decision</title>
 <meta name="description" content="Bring one real business question. RivalFrame investigates competitors, pricing, positioning, buyer pain and market shifts, then returns a source-linked brief with the next move worth making.">
-<meta name="theme-color" content="#f3efe8">
+<meta name="theme-color" content="#fbfcff">
 <link rel="canonical" href="https://rivalframe.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="v2.css">
+<link rel="stylesheet" href="premium.css">
 </head>
 <body>
 <div class="v2-progress" aria-hidden="true"></div>
@@ -22,25 +23,45 @@
     <div class="hero-actions"><a class="btn dark" href="contact.html">Start with one question →</a><a class="btn line" href="sample.html">See a sample report</a></div>
     <div class="trust-line"><span>24h turnaround</span><span>Source-linked</span><span>Human-reviewed</span><span>No platform rollout</span></div>
   </div>
-  <div class="hero-intel" data-stage="0" data-reveal>
-    <div class="intel-top"><span>RivalFrame / live intelligence frame</span><span class="live-dot">working file</span></div>
+  <div class="hero-intel editorial-intel" data-stage="0" data-reveal>
+    <div class="intel-top"><span>RivalFrame / research desk</span><span class="live-dot">live brief</span></div>
     <div class="intel-stage-labels"><button data-stage-btn="0" class="active">Signal</button><button data-stage-btn="1">Evidence</button><button data-stage-btn="2">Implication</button><button data-stage-btn="3">Decision</button></div>
-    <div class="intel-canvas">
-      <div class="scanline"></div>
-      <div class="signal-note s1"><small>pricing page</small><b>Free tier removed</b></div>
-      <div class="signal-note s2"><small>reviews</small><b>Onboarding friction ↑</b></div>
-      <div class="signal-note s3"><small>hiring</small><b>Enterprise security ×3</b></div>
-      <div class="signal-note s4"><small>buyer forums</small><b>Seat pricing objection</b></div>
-      <svg class="network" viewBox="0 0 700 430" aria-hidden="true">
-        <path class="path" d="M120 120 C260 80, 330 120, 430 170"/>
-        <path class="path" d="M140 300 C260 270, 340 250, 430 170"/>
-        <path class="path" d="M540 85 C520 130, 500 145, 430 170"/>
-        <path class="path" d="M570 330 C520 270, 500 230, 430 170"/>
-        <circle class="node" cx="120" cy="120" r="11"/><circle class="node" cx="140" cy="300" r="11"/><circle class="node" cx="540" cy="85" r="11"/><circle class="node" cx="570" cy="330" r="11"/><circle class="node core" cx="430" cy="170" r="18"/>
-        <path class="decision-vector" d="M430 170 C470 220, 500 250, 600 215"/>
-      </svg>
-      <div class="confidence"><span>Confidence</span><i><b></b></i><strong>82%</strong></div>
-      <div class="decision-card"><small>Recommended move</small><p>Reposition the trial around a 7-day proof of value. Hold price.</p></div>
+    <div class="editorial-canvas">
+      <div class="desk-status"><i></i><span>Reviewing current market evidence</span></div>
+      <div class="source-stack" aria-label="Example evidence sources">
+        <article class="source-card">
+          <small><span>Pricing page</span><span>Today · 09:42</span></small>
+          <strong>Free tier removed from the public plan.</strong>
+          <p>Entry offer now begins at the paid team tier.</p>
+          <span class="source-mark" aria-hidden="true"></span>
+        </article>
+        <article class="source-card">
+          <small><span>Customer reviews</span><span>34 mentions</span></small>
+          <strong>Onboarding friction is repeating.</strong>
+          <p>Time-to-value complaints cluster around setup and migration.</p>
+          <span class="source-mark" aria-hidden="true"></span>
+        </article>
+        <article class="source-card">
+          <small><span>Hiring signal</span><span>90-day delta</span></small>
+          <strong>Enterprise security hiring increased ×3.</strong>
+          <p>The competitor appears to be moving up-market.</p>
+          <span class="source-mark" aria-hidden="true"></span>
+        </article>
+      </div>
+      <section class="focus-sheet" aria-label="Example analysis">
+        <div class="focus-kicker">Pattern detected</div>
+        <div class="focus-title">Time-to-value is becoming the battleground.</div>
+        <div class="evidence-list">
+          <div class="evidence-row"><span>Pricing shift corroborated</span><b>Verified</b></div>
+          <div class="evidence-row"><span>Buyer complaint pattern repeated</span><b>Verified</b></div>
+          <div class="evidence-row"><span>Up-market motion supported by hiring</span><b>Inferred</b></div>
+        </div>
+      </section>
+      <section class="decision-panel" aria-label="Example recommendation">
+        <small>Recommended move</small>
+        <h4>Lead with a 7-day proof of value. Hold price.</h4>
+        <div class="decision-meta"><div class="confidence-mini"><span>Confidence</span><i><b></b></i><span>82%</span></div><div class="stage-count">Evidence <strong>12 sources</strong></div></div>
+      </section>
     </div>
   </div>
 </section>
@@ -74,5 +95,6 @@
 </main>
 <footer class="v2-footer"><div class="v2-wrap"><a class="v2-brand" href="#top"><span class="brand-frame">R</span><span>RivalFrame</span></a><span>Competitive and market intelligence, delivered as a decision.</span><a href="legal.html">Legal</a></div></footer>
 <script src="v2.js"></script>
+<script src="premium.js"></script>
 </body>
 </html>
